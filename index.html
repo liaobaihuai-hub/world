@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭指揮中心</title>
+    <style>
+        body { background-color: #0f0f0f; color: white; font-family: 'PingFang TC', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        h1 { color: #f1c40f; text-align: center; font-size: 24px; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 30px; }
+        
+        /* 頭貼區域 */
+        .avatar-row { display: flex; justify-content: space-around; margin: 20px 0; }
+        .member { text-align: center; width: 22%; cursor: pointer; }
+        .circle { 
+            width: 70px; height: 70px; background: #333; border-radius: 50%; 
+            border: 3px solid #f1c40f; margin: 0 auto 8px; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 20px; font-weight: bold; transition: 0.2s;
+            overflow: hidden;
+        }
+        .member:hover .circle { transform: translateY(-5px); border-color: #fff; }
+        .member span { font-size: 14px; color: #ddd; }
+
+        /* 聊天區域 */
+        .main-panel { background: #1a1a1a; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .group-box { 
+            background: linear-gradient(135deg, #2c3e50, #000); 
+            padding: 20px; border-radius: 15px; margin-bottom: 25px; 
+            border: 1px solid #444; cursor: pointer;
+        }
+        .group-box:hover { border-color: #f1c40f; }
+
+        /* 私訊列表 */
+        .section-title { font-size: 14px; color: #888; margin: 0 0 15px 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .dm-item { 
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 15px; background: #262626; border-radius: 12px; margin-bottom: 10px;
+            cursor: pointer; transition: 0.2s;
+        }
+        .dm-item:hover { background: #333; }
+        .name-info { display: flex; align-items: center; gap: 15px; }
+        .status-dot { width: 10px; height: 10px; background: #2ecc71; border-radius: 50%; }
+        .msg-count { background: #e74c3c; color: white; padding: 2px 8px; border-radius: 10px; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🏠 家庭指揮中心</h1>
+    <div class="subtitle">點擊頭貼查看今日行事曆</div>
+
+    <div class="avatar-row">
+        <div class="member" onclick="alert('開啟 五霸 的今日行事曆...')">
+            <div class="circle">爸</div><span>五霸</span>
+        </div>
+        <div class="member" onclick="alert('開啟 老媽 的今日行事曆...')">
+            <div class="circle">媽</div><span>老媽</span>
+        </div>
+        <div class="member" onclick="alert('開啟 老弟 的今日行事曆...')">
+            <div class="circle">弟</div><span>老弟</span>
+        </div>
+        <div class="member" onclick="alert('開啟 我的今日行事曆...')">
+            <div class="circle">我</div><span>我</span>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <div class="group-box" onclick="alert('進入家庭大群組聊天室')">
+            <strong style="font-size: 18px; color: #f1c40f;">💬 家庭聊天群組</strong>
+            <div style="font-size: 12px; color: #aaa; margin-top: 5px;">最後訊息：老媽叫大家吃飯囉...</div>
+        </div>
+
+        <div class="section-title">私訊對話單單</div>
+        
+        <div class="dm-item" onclick="alert('開啟與 五霸 的對話')">
+            <div class="name-info"><div class="status-dot"></div><strong>五霸</strong></div>
+            <span class="msg-count">1</span>
+        </div>
+
+        <div class="dm-item" onclick="alert('開啟與 老媽 的對話')">
+            <div class="name-info"><div class="status-dot"></div><strong>老媽</strong></div>
+        </div>
+
+        <div class="dm-item" onclick="alert('開啟與 老弟 的對話')">
+            <div class="name-info"><div class="status-dot"></div><strong>老弟</strong></div>
+            <span class="msg-count">3</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

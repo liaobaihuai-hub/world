@@ -1,5 +1,5 @@
-![Racing Car](image_26896b.jpg)
-# 🏎️ World Project: 聊天行事曆
+
+#  World Project: 聊天行事曆
 
 這是我的第一個開發專案，目標是結合：
 * **聊天功能**：讓溝通更有趣。
